@@ -19,6 +19,7 @@ background: rgb(247, 247, 247);
 .body-content {
     width: 80vw;
     margin: 0px auto;
+    overflow: hidden;
   }
   .navbar
   {
@@ -108,6 +109,71 @@ background: rgb(247, 247, 247);
 .menu-icon i{
     font-size: 2rem;
 }
+/* Nav section Ends */
+
+/* Bannar section starts */
+.bannar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 100%; 
+}
+.bannar-content {
+  flex: 0 0 60%;
+  font-family: var(--primary-font-family);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  }
+.bannar-content h4, .bannar-content span{
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 61px;
+  text-align: left;
+}
+.bannar-content p{
+  color: var(--tertiary-color);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+}
+.bannar-content button{
+  color:white;    
+  width: 197px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: black;
+  transition: .3s;
+  font-family: var(--primary-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.bannar-content button:hover{
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.bannar-img {
+  flex: 0 0 40%; 
+  max-width: 100%;
+  display: block; 
+}
+
+.bannar-img img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+}
+
+
   @media (min-width: 768px) and (max-width: 1024px) {
     .body-content {
       width: 90vw;
@@ -133,12 +199,33 @@ background: rgb(247, 247, 247);
         height: 45px;
         font-size: 1.1rem;
       }
+      /* banner content starts */
+     
+      
+  .bannar-content h4,
+  .bannar-content span {
+    font-size: 2.5rem; 
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .bannar-content p {
+    font-size: 1.1rem; 
+    line-height: 22px; 
+  }
+
+  .bannar-content button {
+    width: 180px; 
+    height: 45px;
+    font-size: 1.1rem; 
+  }
   }
   
   @media(max-width: 768px) {
     .body-content {
       width: 100vw; 
     }
+    
     .navbar>.logo>h3, .navbar>ul, .navbar>button
     {
         display: none;
@@ -163,8 +250,49 @@ background: rgb(247, 247, 247);
         width: 50px; 
         height: 50px;
       }
+    /* Banner section starts */
+    .bannar {
+      flex-direction: column-reverse; 
+      padding: 0px 20px; 
+    }
+  
+    .bannar-content {
+      flex: 0 0 100%; 
+      box-sizing: border-box; 
+    }
+  
+    .bannar-content h4,
+    .bannar-content span {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+    }
+  
+    .bannar-content p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: center;
+    }
+  
+    .bannar-content button {
+    width: 131px;
+    height: 42px;
+    padding: 6px 24px 6px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0px auto;
+    }
+  
+    .bannar-img {
+      flex: 0 0 100%; 
+    }
+  
+    .bannar-img img {
+      width: 100%; 
+      height: auto;
+      object-fit: cover;
+    }
   }
-  
- 
-  
-  
